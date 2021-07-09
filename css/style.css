@@ -1,6 +1,7 @@
 :root {
     --main-text: #555;
     
+    --bg-white: #fff;
     --bg-light: #fff;
     --bg-dark: #555;
     --bg-accent: rgb(255, 236, 239);
@@ -22,6 +23,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -54,22 +56,26 @@ img {
 
 h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
-h3 { font-size: var(--fs-h3) }
+h3 { font-size: var(--fs-h2) }
 p { font-size: var(--fs-p) }
-strong { font-weight: 900}
+strong { 
+    font-weight: 900;
+    font-size: 3.5rem;
+}
 
 h1,
 h2,
-h3,
-p {
+h3 {
     margin: 1rem 0;
+    font-weight: 900;
+    line-height: 1;
 }
 
 
 /* Header & Nav */
 
 header {
-    background-color: var(--bg-light);
+    background-color: var(--bg-white);
     padding: 1rem 0;
 }
 
@@ -98,16 +104,21 @@ header {
 /* Main Containers */
 
 .main-container {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
 }
 
-.section {
+.hero {
+    background-color: var(--bg-white);
     margin: 5rem 0 15rem 0;
-    border-radius: 1rem;
-    -webkit-box-shadow: 10px 5px 20px 0px rgba(0,0,0,0.1); 
-    box-shadow: 10px 5px 20px 0px rgba(59, 12, 12, 0.1);
     padding: 3rem 0;
+    min-height: 65vh;
+}
+
+.section {
+    background-color: var(--bg-white);
+    margin: 10rem 0 15rem 0;
+    padding: 5rem 0;
 }
 
 .flex {
@@ -117,28 +128,49 @@ header {
     align-items: center;
 }
 
+.bg-accent {
+    background-color: var(--bg-white);
+    background: linear-gradient(132deg, rgba(255,255,255,1) 0%, rgba(255,216,216,1) 100%);
+}
+
 /* Intro */
 
-.intro-title strong {
+.intro-content {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    justify-content: center;
+}
+
+.intro-text h1 strong {
     display:block;
+}
+
+.intro-text h1 {
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.intro-text h3 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
 }
 
 
 .intro-text {
-    text-align: center;
+    width: 85%;
+    margin-top: 2rem;
+    text-align: left;
 }
 
 .portfolio-img {
     border-radius: 50%;
-    width: 10rem;
+    width: 15rem;
 }
 
-.intro-p {
-    margin: 0 auto;
-    width: 85%;
-}
 
 /* Skills */
+
 
 .skill-item {
     width: 95%;
@@ -150,46 +182,63 @@ header {
     box-shadow: 10px 5px 20px 0px rgba(59, 12, 12, 0.1);
 }
 
-.btn {
-    display: block;
-    color: #fff;
-    width: 10rem;
-    margin: 2rem auto;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-    background-color: var(--bg-dark);
+.skill-icon {
+    width: 7rem;
+    margin-bottom: 2rem;
+
+}
+
+.skill-icon:hover {
+    opacity: .8;
+    transform: translate(0, -.5rem);
+    transform: scale(1.1, 1.1);
+}
+
+.skill-group {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5rem;
 }
 
 /* Projects */
 
 .projects {
-    background-color: var(--bg-accent);
+    background-color: var(--bg-light);
 }
 
 .project-card {
     border-radius: 1rem;
     background-color: var(--bg-light);
-    margin: 2rem 3rem;
-    padding: 2rem 2rem;
+    margin: 4rem 0;
     -webkit-box-shadow: 10px 5px 20px 0px rgba(0,0,0,0.1); 
     box-shadow: 10px 5px 20px 0px rgba(59, 12, 12, 0.1);
-
 }
 
 /* Footer */
 
 footer {
-    background-color: var(--bg-accent);
-    padding: 5rem 0;
+    padding: 4rem 0;
+}
+
+.social-list {
+    flex-direction: row;
 }
 
 .social-list-item {
     margin-top: 2rem;
+    font-weight: 900;
+    margin: 0 2rem;
+}
+
+.social-list-item:hover {
+    opacity: .8;
+    transform: translate(0, -.5rem);
+    transform: scale(1.1, 1.1);
 }
 
 /* Media Queries */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
     .skills {
         flex-direction: row;
         
@@ -199,22 +248,22 @@ footer {
         width: 33%;
     }
 
-}
-
-@media screen and (min-width: 1000px) {
-    .main-container {
-        width: 85%;
+    .skill-icon {
+        max-width: 33%;
     }
 
-    .intro {
+}
+
+@media screen and (min-width: 900px) {
+    .intro-content {
         flex-direction: row;
+
     }
 
     .intro-text {
-        text-align: right;
-        margin-left: 5rem;
-        min-width: 40rem;
-        max-width: 25%;
+        margin-left: 6rem;
+        min-width: 35rem;
+        max-width: 20%;
     }
 
     .portfolio-img {
@@ -228,10 +277,20 @@ footer {
         width: 100%;
     }
 
-    .projects {
-        flex-direction: row;
+    .skills {
+        margin: 5rem auto;
+        width: 90%;
     }
 
-    
+    .projects {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 5rem auto;
+        width: 90%;
+    }
+
+    .project-card {
+        max-width: 32%;
+    }
 }
 
