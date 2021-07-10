@@ -7,7 +7,7 @@
   --bg-accent: rgb(255, 236, 239);
 
   --fs-h1: 3rem;
-  --fs-h2: 3rem;
+  --fs-h2: 4rem;
   --fs-h3: 3rem;
   --fs-p: 1.5rem;
 }
@@ -31,6 +31,7 @@ body {
   color: var(--main-text);
   line-height: 1.5;
   background-color: var(--bg-light);
+  text-align: center;
 }
 
 a {
@@ -60,7 +61,7 @@ h2 {
   font-size: var(--fs-h2);
 }
 h3 {
-  font-size: var(--fs-h2);
+  font-size: var(--fs-h3);
 }
 p {
   font-size: var(--fs-p);
@@ -146,12 +147,6 @@ header {
   padding: 7rem 0;
 }
 
-.section h2 {
-  width: 95%;
-  margin: 0 auto;
-  padding-left: 1rem;
-}
-
 .flex {
   display: flex;
   flex-direction: column;
@@ -163,8 +158,8 @@ header {
   background-color: var(--bg-white);
   background: linear-gradient(
     0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 216, 216, 1) 100%
+    rgb(255, 216, 216, 0.3) 0%,
+    rgba(255, 216, 216, 1) 75%
   );
 }
 
@@ -220,10 +215,6 @@ header {
   padding: 2rem 2rem;
   -webkit-box-shadow: 10px 5px 20px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 10px 5px 20px 0px rgba(59, 12, 12, 0.1);
-}
-
-.skill-item h3 {
-  width: 95%;
 }
 
 .skill-icon {
