@@ -7,8 +7,8 @@
     --bg-accent: rgb(255, 236, 239);
 
     --fs-h1: 3rem;
-    --fs-h2: 2.5rem;
-    --fs-h3: 2rem;
+    --fs-h2: 3rem;
+    --fs-h3: 3rem;
     --fs-p: 1.5rem;
 }
 
@@ -90,6 +90,7 @@ header {
 
 .logo {
     line-height: 1;
+    color: #000;
 }
 
 .nav {
@@ -114,7 +115,7 @@ header {
 .section {
     background-color: var(--bg-white);
     margin: 10rem 0 15rem 0;
-    padding: 5rem 0;
+    padding: 7rem 0;
 }
 
 .section h2 {
@@ -132,7 +133,7 @@ header {
 
 .bg-accent {
     background-color: var(--bg-white);
-    background: linear-gradient(132deg, rgba(255,255,255,1) 0%, rgba(255,216,216,1) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,216,216,1) 100%);
 }
 
 /* Intro */
@@ -145,9 +146,12 @@ header {
 
 .intro-text h1 strong {
     display:block;
+    font-size: 3.5rem;
+    color: #000;
 }
 
 .intro-text h1 {
+    font-size: 2.5rem;
     font-weight: 400;
     margin-bottom: 0;
 }
@@ -155,14 +159,17 @@ header {
 .intro-text h3 {
     margin-top: 1rem;
     margin-bottom: 2rem;
-    font-weight: 400;
-    font-size: 2.5rem;
+    font-weight: 700;
+    font-size: 2rem;
 }
 
+.intro-text p {
+    max-width: 50ch;
+}
 
 .intro-text {
     width: 85%;
-    margin-top: 2rem;
+    margin-top: 5rem;
     text-align: left;
 }
 
@@ -175,9 +182,10 @@ header {
 /* Skills */
 
 
+
 .skill-item {
     width: 95%;
-    background-color: var(--bg-accent);
+    background-color: var(--bg-white);
     border-radius: 1rem;
     margin: 2rem 1rem;
     padding: 2rem 2rem;
@@ -211,13 +219,14 @@ header {
 
 .projects {
     background-color: var(--bg-light);
+    flex-direction: column;
 }
 
-.project-card {
+.project-img {
     width: 95%;
     border-radius: 1rem;
     background-color: var(--bg-light);
-    margin: 4rem 0;
+    margin: 3rem 0;
     -webkit-box-shadow: 10px 5px 20px 0px rgba(0,0,0,0.1); 
     box-shadow: 10px 5px 20px 0px rgba(59, 12, 12, 0.1);
 }
@@ -225,7 +234,9 @@ header {
 /* Footer */
 
 footer {
-    padding: 4rem 0;
+    padding: 6rem 0;
+    background-color: var(--bg-white);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,216,216,1) 75%);
 }
 
 .social-list {
@@ -269,6 +280,15 @@ footer {
     }
 
     .intro-text {
+        margin-top: 1rem;
+        margin-right: 5rem;
+    }
+
+    .portfolio-img {
+        order: 2;
+    }
+
+    .intro-text {
         margin-left: 6rem;
         min-width: 35rem;
         max-width: 20%;
@@ -297,8 +317,9 @@ footer {
         width: 95%;
     }
 
-    .project-card {
-        max-width: 32%;
+    .project-img {
+        margin: 2rem 2rem;
+        max-width: 33%;
     }
 }
 
