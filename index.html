@@ -18,42 +18,35 @@
 <body>
     <header>
         <nav class="header-content">
-            <div class="logo">
-                <h1 class="logo-content"><strong>JN</strong></h1>
-            </div>
-                <button class="hamburger" id='hamburger'>
-                    <i class="fas fa-bars fa-2x"></i>
-                </button>
-                <ul class='nav' id='nav'>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                    <li class="nav-item"><a href="#footer" class="nav-link">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main class="main-container">
-        <section class="hero" id='home'>
-            <div class="intro-content flex">
-                <img src="/img/Avatar.png" alt="selfie" class="portfolio-img">
-                <div class="intro-text">
+            <div class="intro-text">
                     <h1>
-                        Hello, my name is <strong>Daniel 'Joon' Yi</strong>
+                        <strong>Daniel 'Joon' Yi</strong>
                     </h1>
-                    <h3>
+                    <!-- <h3>
                         {Aspiring Developer}
                     </h3>
                     <p>
                         My passion is learning. My goal is growing. My timeline is never-ending.
-                    </p>
+                    </p> -->
                 </div>
-            </div>
-        </section>
 
+            <ul class="social-list flex">
+                <li class="social-list-item"><a href="/files/Daniel_Yi_Resume.pdf" target="_blank" class="social-list-link"><i class="fas fa-file fa-2x"></i></a>
+                </li>
+                <li class="social-list-item"><a href="https://www.linkedin.com/in/danieljoonyi" target="_blank"
+                     class="social-list-link"><i class="fab fa-linkedin fa-2x"></i></a>
+                </li>
+                <li class="social-list-item"><a href="https://github.com/JoonDY" target="_blank" class="social-list-link"><i class="fab fa-github fa-2x"></i></a>
+                </li>
+                <li class="social-list-item"><a href="mailto:daniel.joon.yi@gmail.com" target="_blank" class="social-list-link">
+                        <i class="fas fa-paper-plane fa-2x"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
         <section class="section bg-accent" id='about'>
-            <h2>Tools</h2>
-            <div class="skills flex">
+            <div class="skills flex-start">
                 <div class="skill-item">
                     <h3>Friendly</h3>
                     <div class="skill-group flex">
@@ -82,7 +75,7 @@
         </section>
 
         <section class="section" id='projects'>
-            <h2>Projects</h2>
+            <h3>Projects</h2>
             <div class="projects flex">
                 <img src="/img/placeholder.jpg" alt="" class="project-img">
                 <img src="/img/placeholder.jpg" alt="" class="project-img">
@@ -93,16 +86,7 @@
     </main>
 
     <footer id="footer">
-        <ul class="social-list flex">
-            <li class="social-list-item"><a href="#" class="social-list-link"><i class="fas fa-file fa-2x"></i></a>
-            </li>
-            <li class="social-list-item"><a href="#" class="social-list-link"><i class="fab fa-linkedin fa-2x"></i></a>
-            </li>
-            <li class="social-list-item"><a href="#" class="social-list-link"><i class="fab fa-github fa-2x"></i></a>
-            </li>
-            <li class="social-list-item"><a href="mailto:daniel.joon.yi@gmail.com" class="social-list-link">
-                    <i class="fas fa-paper-plane fa-2x"></i></a></li>
-        </ul>
+        
     </footer>
 
     <script src="/js/script.js"></script>
